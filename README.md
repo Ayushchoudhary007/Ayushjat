@@ -1,2 +1,2 @@
 # fruits
-fruits project for basic
+internship projects
