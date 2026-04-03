@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Jat | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h2 class="logo">Ayush <span>Jat</span></h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Frontend Developer</p>
+            <h1>Hi, I'm <span>Ayush</span></h1>
+            <p class="hero-sub">Building clean, responsive, and user-friendly web applications.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#about" class="btn-ghost">About Me</a>
+            </div>
+        </div>
+        <div class="hero-img-wrap">
+            <img src="./public/AyushJat.jpg" alt="Ayush Jat" />
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about-section">
+        <div class="about-inner">
+            <span class="section-label">About</span>
+            <h2>Who I am</h2>
+            <p>
+                I am a frontend developer focused on building clean, responsive,
+                and user-friendly web applications using modern JavaScript frameworks.
+                I love turning ideas into pixel-perfect, performant experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills-section">
+        <span class="section-label">Skills</span>
+        <h2>What I work with</h2>
+        <div class="skills-grid">
+            <span>Python</span><span>SQL</span><span>JavaScript</span>
+            <span>React</span><span>Tailwind</span><span>HTML</span>
+            <span>CSS</span><span>Redux</span><span>Axios</span>
+            <span>Node.js</span><span>Express.js</span><span>MySQL</span>
+            <span>MongoDB</span><span>REST APIs</span><span>Git</span>
+            <span>GitHub</span><span>Firebase</span><span>Postman</span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-section">
+        <div class="projects-header">
+            <span class="section-label light">Projects</span>
+            <h2>Things I've built</h2>
+        </div>
+
+        <div class="slider-wrap" id="slider">
+            <div class="slides" id="slides">
+
+                <div class="slide slide-0">
+                    <div class="slide-progress" id="sp0"></div>
+                    <div class="slide-inner">
+                        <span class="slide-count">01 / 04</span>
+                        <span class="slide-tag">Web</span>
+                        <h3>Travel Website</h3>
+                        <p>Responsive travel landing page with destination browsing, booking UI, and an animated hero
+                            section.</p>
+                        <div class="slide-links">
+                            <a href="#" class="btn-slide-live">Live</a>
+                            <a href="#" class="btn-slide-gh">GitHub</a>
+                        </div>
+                    </div>
+                    <button class="snav prev" onclick="go(-1)">&#10094;</button>
+                    <button class="snav next" onclick="go(1)">&#10095;</button>
+                </div>
+
+                <div class="slide slide-1">
+                    <div class="slide-progress" id="sp1"></div>
+                    <div class="slide-inner">
+                        <span class="slide-count">02 / 04</span>
+                        <span class="slide-tag">E-commerce</span>
+                        <h3>TheShops</h3>
+                        <p>Full-stack e-commerce platform with product catalog, cart management, and a streamlined
+                            checkout flow.</p>
+                        <div class="slide-links">
+                            <a href="#" class="btn-slide-live">Live</a>
+                            <a href="#" class="btn-slide-gh">GitHub</a>
+                        </div>
+                    </div>
+                    <button class="snav prev" onclick="go(-1)">&#10094;</button>
+                    <button class="snav next" onclick="go(1)">&#10095;</button>
+                </div>
+
+                <div class="slide slide-2">
+                    <div class="slide-progress" id="sp2"></div>
+                    <div class="slide-inner">
+                        <span class="slide-count">03 / 04</span>
+                        <span class="slide-tag">App</span>
+                        <h3>Portfolio v2</h3>
+                        <p>Redesigned personal portfolio with dark mode, smooth transitions, and a filterable project
+                            showcase.</p>
+                        <div class="slide-links">
+                            <a href="#" class="btn-slide-live">Live</a>
+                            <a href="#" class="btn-slide-gh">GitHub</a>
+                        </div>
+                    </div>
+                    <button class="snav prev" onclick="go(-1)">&#10094;</button>
+                    <button class="snav next" onclick="go(1)">&#10095;</button>
+                </div>
+
+                <div class="slide slide-3">
+                    <div class="slide-progress" id="sp3"></div>
+                    <div class="slide-inner">
+                        <span class="slide-count">04 / 04</span>
+                        <span class="slide-tag">Tool</span>
+                        <h3>Dev Dashboard</h3>
+                        <p>Internal developer dashboard for monitoring deployments, logs, and real-time system health
+                            metrics.</p>
+                        <div class="slide-links">
+                            <a href="#" class="btn-slide-live">Live</a>
+                            <a href="#" class="btn-slide-gh">GitHub</a>
+                        </div>
+                    </div>
+                    <button class="snav prev" onclick="go(-1)">&#10094;</button>
+                    <button class="snav next" onclick="go(1)">&#10095;</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide-dots" id="dots"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed & built by <span>Ayush Jat</span> &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
