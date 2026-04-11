@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background glow blobs */
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #6366f1;
+            filter: blur(120px);
+            opacity: 0.6;
+            animation: move 10s infinite alternate;
+        }
+
+        .blob:nth-child(1) {
+            top: 10%;
+            left: 10%;
+        }
+
+        .blob:nth-child(2) {
+            bottom: 10%;
+            right: 10%;
+            background: #22c55e;
+            animation-delay: 2s;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(50px, -50px);
+            }
+        }
+
+        /* Glass Card */
+        .card {
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #cbd5f5;
+            margin-bottom: 25px;
+        }
+
+        /* Loader */
+        .loader {
+            width: 45px;
+            height: 45px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-home {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+
+        .btn-home:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+        }
+
+        .btn-contact:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Glow background -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+
+    <!-- Glass Card -->
+    <div class="card">
+        <h1>🚀 Coming Soon</h1>
+        <p>This feature is under development. Something awesome is on the way.</p>
+
+        <div class="loader"></div>
+
+        <div class="buttons">
+            <a href="/" class="btn btn-home">Back to Home</a>
+            <a href="mailto:your@email.com" class="btn btn-contact">Notify Me</a>
+        </div>
+    </div>
+
+    <footer>
+        © <span id="year"></span> Your Name
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
